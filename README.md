@@ -2,8 +2,8 @@
 
 ```sh
 module "terraform-aws-sqs" {
-  source  = "pquintero/terraform-aws-glue-catalog-database"
-  version = "0.0.1"
+  source  = "pquintero/terraform-aws-glue-catalog-database/aws"
+  version = "0.0.2"
 }
 ```
 
