@@ -1,20 +1,17 @@
 #---------------------------------------------------
 # AWS Glue catalog database
 #---------------------------------------------------
-resource "aws_glue_catalog_database" "glue_catalog_database" {
-  count = var.enable_glue_catalog_database ? 1 : 0
+output "glue_catalog_database_arn" {
+  description = "ARN for glue catalog database"
+  value       = element(concat(aws_glue_catalog_database.glue_catalog_database.*.arn, [""]), 0)
+}
 
-  name = var.glue_catalog_database_name != "" ? lower(var.glue_catalog_database_name) : "${lower(var.name)}-glue-catalog-db-${lower(var.environment)}"
+output "glue_catalog_database_id" {
+  description = "ID for glue catalog database"
+  value       = element(concat(aws_glue_catalog_database.glue_catalog_database.*.id, [""]), 0)
+}
 
-  description  = var.glue_catalog_database_description
-  catalog_id   = var.glue_catalog_database_catalog_id
-  location_uri = var.glue_catalog_database_location_uri
-  parameters   = var.glue_catalog_database_parameters
-
-  lifecycle {
-    create_before_destroy = true
-    ignore_changes        = []
-  }
-
-  depends_on = []
+output "glue_catalog_database_name" {
+  description = "Name for glue catalog database"
+  value       = element(concat(aws_glue_catalog_database.glue_catalog_database.*.name, [""]), 0)
 }
