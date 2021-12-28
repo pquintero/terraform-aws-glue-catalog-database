@@ -47,7 +47,11 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_glue_catalog_database_arn"></a> [glue\_catalog\_database\_arn](#output\_glue\_catalog\_database\_arn) | ARN for glue catalog database |
+| <a name="output_glue_catalog_database_id"></a> [glue\_catalog\_database\_id](#output\_glue\_catalog\_database\_id) | ID for glue catalog database |
+| <a name="output_glue_catalog_database_name"></a> [glue\_catalog\_database\_name](#output\_glue\_catalog\_database\_name) | Name for glue catalog database |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Test
